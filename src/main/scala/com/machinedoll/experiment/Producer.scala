@@ -1,7 +1,7 @@
 package com.machinedoll.experiment
 
 import com.machinedoll.experiment.data.TestData
-import com.machinedoll.experiment.processor.{SerializeDataFunction, TestDataKafkaAvroSink}
+import com.machinedoll.experiment.processor.{ConvertPOJOToString, SerializeDataFunction, TestDataKafkaAvroSink}
 import com.machinedoll.experiment.source.SlowEmitSource
 import org.apache.avro.Schema
 import org.apache.flink.api.scala._
