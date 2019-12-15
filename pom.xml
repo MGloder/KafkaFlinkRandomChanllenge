@@ -41,6 +41,10 @@ under the License.
                 <enabled>true</enabled>
             </snapshots>
         </repository>
+        <repository>
+            <id>confluent</id>
+            <url>http://packages.confluent.io/maven/</url>
+        </repository>
     </repositories>
 
     <properties>
@@ -53,6 +57,12 @@ under the License.
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>io.confluent</groupId>
+            <artifactId>kafka-avro-serializer</artifactId>
+            <version>5.3.0</version>
+        </dependency>
+
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-connector-kafka_${scala.binary.version}</artifactId>

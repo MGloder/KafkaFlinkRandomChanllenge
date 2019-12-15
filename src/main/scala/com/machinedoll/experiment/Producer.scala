@@ -1,7 +1,7 @@
 package com.machinedoll.experiment
 
 import com.machinedoll.experiment.data.TestData
-import com.machinedoll.experiment.processor.TestDataKafkaAvroSink
+import com.machinedoll.experiment.processor.{SerializeDataFunction, TestDataKafkaAvroSink}
 import com.machinedoll.experiment.source.SlowEmitSource
 import org.apache.avro.Schema
 import org.apache.flink.api.scala._
@@ -32,10 +32,8 @@ object Producer {
     val testDataStream: DataStream[TestData] = env.addSource(new SlowEmitSource(sleepInterval))
 
     testDataStream
-      //      .map(new SerializeDataFunction[TestData](schemaVersion))
-//      .addSink(TestDataKafkaAvroSink.getKafkaAvroSink[TestData]("very-first-topic"))
-        .print()
-    //    serializedDataStream.print()
+      .map(new ConvertPOJOToString)
+      .addSink(TestDataKafkaAvroSink.getSimpleString("simple-string-topic"))
 
     env.execute("Demo Consumer: Load Schema From External Schema Register and Send to Kafka")
   }

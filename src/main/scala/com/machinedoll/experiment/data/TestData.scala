@@ -11,5 +11,7 @@ case class TestData(
                      option: Option[String],
                      list: List[String],
                      map: Map[String, TestDataNested]
-                   )
+                   ) {
+  override def toString: String = "Value: " + string + ":" + int.toString
+}
 
