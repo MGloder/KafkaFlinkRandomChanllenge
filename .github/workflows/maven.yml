@@ -20,5 +20,5 @@ jobs:
         java-version: 1.8
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Public to Package
+    - name: Publish to Package
       run: mvn deploy -Dregistry=https://maven.pkg.github.com/MGloder -Dtoken=${{ secrets.GITHUB_TOKEN }}
