@@ -33,8 +33,8 @@ object Producer {
 
     testDataStream
       //      .map(new SerializeDataFunction[TestData](schemaVersion))
-      .addSink(TestDataKafkaAvroSink.getKafkaAvroSink[TestData]("very-first-topic"))
-
+//      .addSink(TestDataKafkaAvroSink.getKafkaAvroSink[TestData]("very-first-topic"))
+        .print()
     //    serializedDataStream.print()
 
     env.execute("Demo Consumer: Load Schema From External Schema Register and Send to Kafka")
