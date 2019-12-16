@@ -1,7 +1,7 @@
 package com.machinedoll.experiment
 
 import com.machinedoll.experiment.data.TestData
-import com.machinedoll.experiment.processor.{ConvertPOJOToString, SerializeDataFunction, TestDataKafkaAvroSink}
+import com.machinedoll.experiment.processor.ConvertPOJOToString
 import com.machinedoll.experiment.source.SlowEmitSource
 import org.apache.avro.Schema
 import org.apache.flink.api.scala._
@@ -33,7 +33,8 @@ object Producer {
 
     testDataStream
       .map(new ConvertPOJOToString)
-      .addSink(TestDataKafkaAvroSink.getSimpleString("simple-string-topic"))
+      .print()
+    //      .addSink(TestDataKafkaAvroSink.getSimpleString("simple-string-topic"))
 
     env.execute("Demo Consumer: Load Schema From External Schema Register and Send to Kafka")
   }

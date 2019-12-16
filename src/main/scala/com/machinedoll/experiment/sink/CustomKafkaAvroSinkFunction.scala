@@ -5,7 +5,7 @@ import org.apache.flink.streaming.api.functions.sink.{SinkFunction, TwoPhaseComm
 import org.apache.flink.streaming.connectors.kafka.FlinkKafkaProducer
 import org.apache.flink.streaming.connectors.kafka.internal.FlinkKafkaInternalProducer
 
-class CustomKafkaAvroSinkFunction extends TwoPhaseCommitSinkFunction[TestData, TXN, CONTEXT] {
-
-}
+//class CustomKafkaAvroSinkFunction extends TwoPhaseCommitSinkFunction[TestData, TXN, CONTEXT] {
+//
+//}
 
