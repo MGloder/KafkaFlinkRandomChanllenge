@@ -133,6 +133,10 @@
       <name>Apache Development Snapshot Repository</name>
       <url>https://repository.apache.org/content/repositories/snapshots/</url>
     </repository>
+    <repository>
+      <id>confluent</id>
+      <url>http://packages.confluent.io/maven/</url>
+    </repository>
   </repositories>
   <dependencies>
     <dependency>
@@ -161,10 +165,6 @@
           <artifactId>scala-compiler</artifactId>
           <groupId>org.scala-lang</groupId>
         </exclusion>
-        <exclusion>
-          <artifactId>jsr305</artifactId>
-          <groupId>com.google.code.findbugs</groupId>
-        </exclusion>
       </exclusions>
     </dependency>
     <dependency>
@@ -185,10 +185,6 @@
           <artifactId>scala-compiler</artifactId>
           <groupId>org.scala-lang</groupId>
         </exclusion>
-        <exclusion>
-          <artifactId>jsr305</artifactId>
-          <groupId>com.google.code.findbugs</groupId>
-        </exclusion>
       </exclusions>
     </dependency>
     <dependency>
@@ -206,10 +202,6 @@
         <exclusion>
           <artifactId>frocksdbjni</artifactId>
           <groupId>com.data-artisans</groupId>
-        </exclusion>
-        <exclusion>
-          <artifactId>jsr305</artifactId>
-          <groupId>com.google.code.findbugs</groupId>
         </exclusion>
       </exclusions>
     </dependency>
@@ -230,7 +222,7 @@
     <repository>
       <id>github</id>
       <name>GitHub OWNER Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/MGloader/KafkaFlinkRandomChanllenge</url>
+      <url>https://maven.pkg.github.com/MGloder/KafkaFlinkRandomChanllenge</url>
     </repository>
   </distributionManagement>
   <properties>
