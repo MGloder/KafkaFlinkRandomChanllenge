@@ -14,5 +14,6 @@ object SparkReadAvroFromFile {
       .format("avro")
       .load("./SparkRandomChallenge/src/main/resources/users.avro")
 
+    users.printSchema()
   }
 }
