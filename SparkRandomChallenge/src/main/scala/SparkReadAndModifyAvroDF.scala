@@ -39,7 +39,6 @@ object SparkReadAndModifyAvroDF {
       .save("./SparkRandomChallenge/src/main/resources/user_name.avro")
 
     userDS.show()
-    //    userName.show()
   }
 }
 

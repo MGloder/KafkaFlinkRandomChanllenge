@@ -75,7 +75,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.twitter:chill-java:0.7.6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.flink:flink-clients_2.12:1.9.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.flink:flink-optimizer_2.12:1.9.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.scala-lang:scala-library:2.12.8" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.scala-lang:scala-library:2.12.7" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.flink:flink-statebackend-rocksdb_2.12:1.9.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: com.data-artisans:frocksdbjni:5.17.2-artisans-1.0" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.slf4j:slf4j-log4j12:1.7.7" level="project" />

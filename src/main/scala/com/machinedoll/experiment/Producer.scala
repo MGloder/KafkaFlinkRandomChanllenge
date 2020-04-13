@@ -35,7 +35,6 @@ object Producer {
       .map(new ConvertPOJOToString)
       .print()
     //      .addSink(TestDataKafkaAvroSink.getSimpleString("simple-string-topic"))
-
     env.execute("Demo Consumer: Load Schema From External Schema Register and Send to Kafka")
   }
 
