@@ -24,7 +24,10 @@ under the License.
     <groupId>com.machinedoll.experiment</groupId>
     <artifactId>happy</artifactId>
     <version>1.0-alpha</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>SparkRandomChallenge</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <name>Random Challenge FLINK</name>
     <url>http://www.myorganization.org</url>
@@ -52,8 +55,8 @@ under the License.
         <flink.version>1.9.1</flink.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <scala.binary.version>2.11</scala.binary.version>
-        <scala.version>2.11.12</scala.version>
+        <scala.binary.version>2.12</scala.binary.version>
+        <scala.version>2.12.8</scala.version>
     </properties>
 
     <dependencies>
