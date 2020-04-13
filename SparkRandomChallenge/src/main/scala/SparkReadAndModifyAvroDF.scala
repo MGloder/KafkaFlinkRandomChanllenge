@@ -17,6 +17,8 @@ object SparkReadAndModifyAvroDF {
 
     val userName = users.map(_.getString(0))
 
+    users.write.format("avro").save("./SparkRandomChallenge/src/main/resources/user_name.avro")
+
     userName.show()
   }
 }
