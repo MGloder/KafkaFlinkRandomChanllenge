@@ -10,7 +10,7 @@ import scala.util.Random
 /*
   Need load external schema
  */
-class SlowEmitSource(sleepIntervalMS: Long) extends RichSourceFunction[TestData] {
+class SlowEmitSource() extends RichSourceFunction[TestData] {
   var isRunning = true
   var currentIndex: Long = 0
 

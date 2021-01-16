@@ -1,4 +1,4 @@
-package com.machinedoll.experiment.processor
+package com.machinedoll.experiment.sink
 
 import java.util.Properties
 
@@ -14,6 +14,7 @@ object TestDataKafkaAvroSink {
     new SimpleStringSchema(),
     properties,
     FlinkKafkaProducer.Semantic.EXACTLY_ONCE)
+
 
   //  def getKafkaAvroSink(topic: String): FlinkKafkaProducer[TestData] = {
   //
