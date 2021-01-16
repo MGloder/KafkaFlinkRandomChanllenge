@@ -12,7 +12,7 @@ import scala.util.Random
  */
 class SlowEmitSource() extends RichSourceFunction[TestData] {
   var isRunning = true
-  var currentIndex: Long = 0
+  var currentIndex: Long = 5839478
 
   def generateData(id: Long): TestData = TestData(
     string = "id",
