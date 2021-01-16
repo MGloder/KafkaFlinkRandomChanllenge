@@ -12,10 +12,11 @@ import scala.util.Random
  */
 class SlowEmitSource(sleepIntervalMS: Long) extends RichSourceFunction[TestData] {
   var isRunning = true
+  var currentIndex: Long = 0
 
-  def generateData(): TestData = TestData(
+  def generateData(id: Long): TestData = TestData(
     string = "id",
-    int = Random.nextInt(1000),
+    int = id,
     bigDecimal = BigDecimal(Random.nextDouble()),
     instant = Instant.now(),
     nested = TestDataNested(1234),
@@ -26,10 +27,8 @@ class SlowEmitSource(sleepIntervalMS: Long) extends RichSourceFunction[TestData]
 
   override def run(ctx: SourceFunction.SourceContext[TestData]): Unit = {
     while (isRunning) {
-      val generatedData: TestData = generateData()
-      ctx.markAsTemporarilyIdle()
-      Thread.sleep(sleepIntervalMS)
-      ctx.collect(generatedData)
+      ctx.collect(generateData(currentIndex))
+      currentIndex = currentIndex + 1
     }
   }
 

@@ -26,6 +26,7 @@ under the License.
     <version>1.0-alpha</version>
     <modules>
         <module>SparkRandomChallenge</module>
+        <module>FlinkRandomChallenge</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -52,7 +53,7 @@ under the License.
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <flink.version>1.9.1</flink.version>
+        <flink.version>1.12.0</flink.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <scala.binary.version>2.12</scala.binary.version>
@@ -60,21 +61,15 @@ under the License.
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>io.confluent</groupId>
-            <artifactId>kafka-avro-serializer</artifactId>
-            <version>5.3.0</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>io.confluent</groupId>-->
+            <!--<artifactId>kafka-avro-serializer</artifactId>-->
+            <!--<version>5.3.0</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.apache.flink</groupId>
             <artifactId>flink-connector-kafka_${scala.binary.version}</artifactId>
-            <version>${flink.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.avro</groupId>
-            <artifactId>avro</artifactId>
             <version>${flink.version}</version>
         </dependency>
 
