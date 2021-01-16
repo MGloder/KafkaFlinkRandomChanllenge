@@ -10,6 +10,5 @@ case class TestData(string: String,
                     option: Option[String],
                     list: List[String],
                     map: Map[String, TestDataNested]) extends Serializable {
-  override def toString: String = "Value: " + string + ":" + int.toString
 }
 

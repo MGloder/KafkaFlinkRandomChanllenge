@@ -9,12 +9,8 @@ object TestDataKafkaAvroSink {
   val properties = new Properties
   properties.setProperty("bootstrap.servers", "10.8.3.102:6667")
 
-  val simpleStringProducer = new FlinkKafkaProducer[String](
-    "test",
-    new SimpleStringSchema(),
-    properties,
-    FlinkKafkaProducer.Semantic.EXACTLY_ONCE)
-
+  val simpleStringProducer =
+    new FlinkKafkaProducer[String]("test", new SimpleStringSchema(), properties)
 
   //  def getKafkaAvroSink(topic: String): FlinkKafkaProducer[TestData] = {
   //
